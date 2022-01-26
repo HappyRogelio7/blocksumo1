@@ -1,0 +1,16 @@
+# Project exclude paths
+/.gradle/
+/api/build/
+/api/build/classes/java/main/
+/api/server/build/
+/api/server/build/classes/java/main/
+/commons/build/
+/commons/build/classes/java/main/
+/commons/loader-util/build/
+/commons/loader-util/build/classes/java/main/
+/commons/server/build/
+/gradle/
+/plugin/build/
+/plugin/build/classes/java/main/
+/plugin/loader/build/
+/plugin/loader/build/classes/java/main/

@@ -1,0 +1,7 @@
+name: BlockSumo
+main: com.zittla.blocksumo.plugin.loader.BlockSumoPluginLoader
+version: ${version}
+
+softdepend:
+  - FastAsyncWorldEdit
+  - WorldEdit

@@ -1,0 +1,10 @@
+rootProject.name = 'blocksumo'
+
+include('plugin',
+        'plugin:loader',
+        'commons',
+        'commons:server',
+        'commons:loader-util',
+        'api',
+        'api:server')
+

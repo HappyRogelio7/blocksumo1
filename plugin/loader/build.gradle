@@ -1,0 +1,28 @@
+plugins {
+    id 'com.github.johnrengelman.shadow'
+}
+
+dependencies {
+    implementation project(':commons:loader-util')
+
+    implementation project(':api:server')
+    implementation project(':api')
+}
+
+processResources {
+    filesMatching('plugin.yml') {
+        expand 'version': project.version
+    }
+}
+
+shadowJar {
+    archiveFileName = "Blocksumo-Multiarena-${project.version}.jar"
+
+    from {
+        project(':plugin').tasks.shadowJar.archiveFile
+    }
+}
+
+artifacts {
+    archives shadowJar
+}

@@ -1,0 +1,29 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+repositories {
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://repo.aikar.co/content/groups/aikar/' }
+}
+
+dependencies {
+    implementation 'co.aikar:acf-paper:0.5.1-SNAPSHOT'
+
+    compileOnly project(':api:server')
+    compileOnly project(':api')
+
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+
+    compileOnly project(':commons:loader-util')
+    implementation project(':commons:server')
+    implementation project(':commons')
+}
+
+shadowJar {
+    archiveFileName = 'blocksumo.plugin'
+}
+
+artifacts {
+    archives shadowJar
+}
